@@ -1,0 +1,12 @@
+{
+
+  "Parameters" : 
+  {
+    "S3bucketname": "helooooooo00000000",
+    "EC2parametervalues": "t2.micro"
+   }
+
+}
+
+
+

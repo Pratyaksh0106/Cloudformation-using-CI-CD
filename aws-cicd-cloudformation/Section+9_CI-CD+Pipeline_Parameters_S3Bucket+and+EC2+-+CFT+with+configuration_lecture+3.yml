@@ -1,0 +1,40 @@
+---
+AWSTemplateFormatVersion: "2010-09-09"
+Description:
+  This is the first cloudformation template to create S3 bucket and EC2 instance
+
+Parameters:
+  S3bucketname:
+    Type: String
+   
+  EC2parametervalues:
+    Type: String
+    Default: t2.micro
+    AllowedValues:
+      - t2.micro
+      - m1.small
+      - m1.large
+      - t2.xlarge
+    Description: Enter t2.micro, m1.small, or m1.large. Default is t2.micro.
+
+Resources:
+  RahulS3bucket:
+    Type: AWS::S3::Bucket
+    Properties: 
+      BucketName: !Ref S3bucketname
+
+  RahulEC2Instance:
+    Type: AWS::EC2::Instance
+    Properties: 
+      ImageId: "ami-05fa00d4c63e32376"
+      InstanceType: !Ref EC2parametervalues
+
+
+
+
+    
+
+
+
+
+
